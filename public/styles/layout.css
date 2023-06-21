@@ -65,13 +65,17 @@ body {
 
  .old-tweet {
   width: 90%;
-  border: solid 4px;
- }
+  margin-bottom: 50px; /*creates some extra white space at bottom*/
+}
 
- .old-tweet:hover {
+.old-tweet:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 11px;
-  
- }
+}
+
+.tweet {
+  border: solid 4px;
+  margin-bottom:10px;
+}
 
  .time-icon {
   display: flex;
