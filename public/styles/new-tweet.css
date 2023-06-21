@@ -1,0 +1,36 @@
+.new-tweet {
+  width: 90%;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-counter {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#tweet-button {
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+#input-text {
+  resize: none;
+  border: none;
+  border-bottom: solid 4px;
+  outline: none;
+}
+
+.invalid {
+  color: red;
+}
+
+.valid {
+  color: green;
+}

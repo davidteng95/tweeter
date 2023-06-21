@@ -18,8 +18,85 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  background-color: #f4f4ec;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+ }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 2;
+ }
+
+ .old-text {
+  height: 70px;
+  width: 98%;
+  border: none;
+  border-bottom: solid 4px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+ }
+
+ .old-tweet {
+  width: 90%;
+  border: solid 4px;
+ }
+
+ .old-tweet:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 11px;
+  
+ }
+
+ .time-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+ 
+ .day {
+  margin: 10px;
+  margin-right: 75%;
+  font-size: small;
+ }
+
+ .at-account {
+  color:#8e8983;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+ }
+ 
+ .icon {
+  color:#545149;
+ }
+
+ .icon:hover {
+  color:#e5ae55;
+ }
