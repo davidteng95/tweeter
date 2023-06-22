@@ -77,11 +77,22 @@ $(() => {
 
   $('#tweetform').on("submit", function (event) {
     event.preventDefault(); //stop the browser from auto submitting
-    //console.log("form submission prevented"); shows if event.preventDefault is executed
-
+    //console.log("form submission prevented"); //shows if event.preventDefault is executed
+    
+    
+    if ($('#input-text').val() === "" || $('#input-text').val() === null) {
+      alert(`Tweet can not be empty, please enter a Tweet below`);
+      return;
+    }
+    
+    if ($('#input-text').val().length > 140) {
+      alert(`Tweet too long, only 140 characters per Tweet`);
+      return;
+    }
+    
     const data = $('#tweetform').serialize();
     //console.log(data); shows what the input is
-
+    
     $.ajax({
       url: "/tweets",
       method: 'POST',
