@@ -68,7 +68,7 @@ body {
   margin-bottom: 50px; /*creates some extra white space at bottom*/
 }
 
-.old-tweet:hover {
+.tweet:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 11px;
 }
 
