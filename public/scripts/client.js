@@ -43,9 +43,11 @@ $(() => {
       const $tweetInfo = createTweetElement(tweet);
       $tweet.prepend($tweetInfo);
     };
+  
   }
   
   const createTweetElement = (data) => {
+    const timestamp = timeago.format(data.created_at);
     const $tweet = $(`
       <article class="tweet">
         <div class="info">
@@ -57,7 +59,7 @@ $(() => {
           </div>
         <div class="old-text">${data.content.text}</div>
         <div class="time-icon">
-          <label class="day">${data.created_at}</label>
+          <label class="day">${timestamp}</label>
           <div>
             <i class="fa-solid fa-flag icon" href=""></i>
             <i class="fa-solid fa-retweet icon" href=""></i>
@@ -70,7 +72,7 @@ $(() => {
     return $tweet;
   };
   
-  renderTweets(data);
+  // renderTweets(data);
 
 
   $('#tweetform').on("submit", function (event) {
@@ -90,6 +92,17 @@ $(() => {
     });
   });
 
+  const loadtweets = () => {
+    $.ajax({
+      url: "/tweets",
+      method: 'GET',
+      success: () => {
+        console.log("got tweets");
+        renderTweets(data);
+      }
+    });
+  }
 
+  loadtweets();
 });
 
