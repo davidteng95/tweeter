@@ -38,7 +38,8 @@ $(() => {
   
   const renderTweets = function(tweets) {
     const $tweet = $('.old-tweet');
-
+    $tweet.empty();
+    
     for (const tweet of tweets) {
       const $tweetInfo = createTweetElement(tweet);
       $tweet.prepend($tweetInfo);
@@ -71,8 +72,6 @@ $(() => {
 
     return $tweet;
   };
-  
-  // renderTweets(data);
 
 
   $('#tweetform').on("submit", function (event) {
@@ -99,6 +98,10 @@ $(() => {
       data: data,
       success: () => {
         console.log("Ajax request successful");
+        loadtweets();
+
+        $('#input-text').val('');
+        $('.counter').text('140');
       }
     });
   });
@@ -107,7 +110,7 @@ $(() => {
     $.ajax({
       url: "/tweets",
       method: 'GET',
-      success: () => {
+      success: (data) => {
         console.log("got tweets");
         renderTweets(data);
       }
@@ -115,5 +118,6 @@ $(() => {
   }
 
   loadtweets();
+
 });
 
