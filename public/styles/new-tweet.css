@@ -34,3 +34,13 @@
 .valid {
   color: green;
 }
+
+.error {
+  color: red;
+  font-size: 40px;
+  margin-top: 5px;
+  display: none; /* Hide the error element initially */
+  border: red 6px solid;
+  display: flex;
+  justify-content: center;
+}
