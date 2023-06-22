@@ -62,16 +62,25 @@ $(() => {
         <div class="time-icon">
           <label class="day">${timestamp}</label>
           <div>
-            <i class="fa-solid fa-flag icon" href=""></i>
-            <i class="fa-solid fa-retweet icon" href=""></i>
-            <i class="fa-solid fa-heart icon" href=""></i>
+            <a href=""><i class="fa-solid fa-flag icon"></i></a>
+            <a href=""><i class="fa-solid fa-retweet icon"></i></a>
+            <a href=""><i class="fa-solid fa-heart icon"></i></a>
           </div>
         </div>
       </article>
     `);
 
+    $tweet.find('.old-text').text(data.content.text); //.text() method
+
     return $tweet;
   };
+
+  //escape method, <div class="old-text">${escape(data.content.text)}</div>
+  // const escape = function (str) {
+  //   let div = document.createElement("div");
+  //   div.appendChild(document.createTextNode(str));
+  //   return div.innerHTML;
+  // };
 
 
   $('#tweetform').on("submit", function (event) {
@@ -118,8 +127,8 @@ $(() => {
     });
   }
 
-  loadtweets();
-  $('.error').hide();
+  loadtweets(); //preloads existing tweets from data
+  $('.error').hide(); //hides the border when not triggered
 
 });
 
