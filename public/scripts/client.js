@@ -36,33 +36,6 @@ $(() => {
   ];
 
   
-  // const $tweetInfo = createTweetElement(tweets);
-  
-  
-  
-  // const $tweetCode = $(`
-  // <article class="tweet">
-  //         <div class="info">
-  //           <div class="avatar-name">
-  //             <img src="/images/boy.png" class="avatar">
-  //             <label>David Teng</label>
-  //           </div>
-  //           <label class="at-account">@David</label>
-  //         </div>
-  //         <div class="old-text">Hello, World!</div>
-  //         <div class="time-icon">
-  //           <label class="day">10 days ago</label>
-  //           <div>
-  //             <i class="fa-solid fa-flag icon" href=""></i>
-  //             <i class="fa-solid fa-retweet icon" href=""></i>
-  //             <i class="fa-solid fa-heart icon" href=""></i>
-  //           </div>
-  //         </div>
-  //       </article>
-  // `);
-  
-  
-  
   const renderTweets = function(tweets) {
     const $tweet = $('.old-tweet');
 
@@ -99,4 +72,24 @@ $(() => {
   
   renderTweets(data);
 
+
+  $('#tweetform').on("submit", function (event) {
+    event.preventDefault(); //stop the browser from auto submitting
+    //console.log("form submission prevented"); shows if event.preventDefault is executed
+
+    const data = $('#tweetform').serialize();
+    //console.log(data); shows what the input is
+
+    $.ajax({
+      url: "/tweets",
+      method: 'POST',
+      data: data,
+      success: () => {
+        console.log("Ajax request successful");
+      }
+    });
+  });
+
+
 });
+
