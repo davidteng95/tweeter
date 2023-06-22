@@ -80,12 +80,12 @@ $(() => {
     
     
     if ($('#input-text').val() === "" || $('#input-text').val() === null) {
-      alert(`Tweet can not be empty, please enter a Tweet below`);
+      $('.error').text(`⚠️Tweet can not be empty, please enter a Tweet below⚠️`).slideDown();
       return;
     }
     
     if ($('#input-text').val().length > 140) {
-      alert(`Tweet too long, only 140 characters per Tweet`);
+      $('.error').text(`⚠️Tweet too long, only 140 characters per Tweet⚠️`).slideDown();
       return;
     }
     
@@ -102,6 +102,7 @@ $(() => {
 
         $('#input-text').val('');
         $('.counter').text('140');
+        $('.error').hide();
       }
     });
   });
@@ -118,6 +119,7 @@ $(() => {
   }
 
   loadtweets();
+  $('.error').hide();
 
 });
 
