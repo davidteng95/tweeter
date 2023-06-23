@@ -4,16 +4,13 @@ header {
   flex-direction: column;
   background-color: #f0a165;
   background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
-  /* padding-top: 120px; */
   margin-top: 120px;
   align-items: center;
   justify-content: end;
+  overflow:hidden;
 }
 
 .avatar {
-  /* height: 400px; */
-  /* width: 100%; */
-  /* background-color: #e99610; */
   display: flex;
   align-items: center;
   justify-content: end;
