@@ -99,7 +99,7 @@ $(() => {
     }
     
     const data = $('#tweetform').serialize();
-    //console.log(data); shows what the input is
+    //console.log(data); shows what the input is after serialize
     
     $.ajax({
       url: "/tweets",
