@@ -38,7 +38,7 @@
 
 .error {
   color: red;
-  font-size: 40px;
+  font-size: 30 px;
   margin-top: 5px;
   margin-bottom: 10px;
   display: none; /* Hide the error element initially */
