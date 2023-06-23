@@ -9,6 +9,7 @@
     flex-direction: row;
     align-items: flex-start;
     margin: 0 auto;
+    padding-top: 5%;
   }
 
   header {
@@ -20,6 +21,6 @@
   main {
     width: 66.7%;
     float: right;
-    padding-top: 130px;
+    padding-top: 120px;
   }
 }
