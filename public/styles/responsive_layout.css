@@ -1,0 +1,25 @@
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 33.3%;
+    float: left;
+    margin-left: 4%;
+  }
+
+  main {
+    width: 66.7%;
+    float: right;
+    padding-top: 130px;
+  }
+}
