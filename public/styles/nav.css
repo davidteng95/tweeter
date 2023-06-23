@@ -1,7 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #f0a165;
+  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
   color: #FFFFFF;
   padding: 0 1.5em;
   position: fixed;
@@ -18,12 +19,7 @@ nav>div {
 
 .logo {
   font-family: 'Bungee', sans-serif;
-  /* font-size:larger; */
-  /* flex-grow: 2; */
   display: flex;
-  /* align-self: center;  if want to change to bottom*/
-  /* align-items: center; */
-  /* justify-content: space-between; */
 }
 
 .new-text {
