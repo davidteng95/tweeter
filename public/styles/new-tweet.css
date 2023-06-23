@@ -33,10 +33,6 @@
   color: red;
 }
 
-.valid {
-  color: green;
-}
-
 .error {
   color: red;
   font-size: 30 px;
