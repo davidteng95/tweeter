@@ -22,11 +22,6 @@ $(document).ready(function() {
       counter.addClass("invalid");
     } else {
       counter.removeClass("invalid");
-      // counter.addClass("valid");
     }
-    // console.log(inputLength);
-    // console.log(this);
-    console.log(counter);
-    console.log(remainingChars);
   });
 });
