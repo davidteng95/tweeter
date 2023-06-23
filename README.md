@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+![Screenshot of tweeter on desktop mode](https://github.com/davidteng95/tweeter/blob/master/docs/tweeter_on_desktop.png?raw=true)
+![Screenshot of tweeter on mobile/tablet mode](https://github.com/davidteng95/tweeter/blob/master/docs/tweeter_on_mobile_tablet.png?raw=true)
+![Screenshot of tweeter slidedown errors](https://github.com/davidteng95/tweeter/blob/master/docs/tweet_error.png?raw=true)
